@@ -29,15 +29,15 @@ def calc_coord_area(theta_grid, phi_grid):
         2 - Only handles half spheres at the moment    
 
     arguments:
-        theta_grid - numpy array [Nt, Np] of theta points in 
+        theta_grid - numpy array [Np, Nt] of theta points in 
                      grid format. Where Nt and Np are the number of 
                      theta and phi points respectively. [radians]
-        phi_grid   - numpy array [Nt, Np] of phi points in 
+        phi_grid   - numpy array [Np, Nt] of phi points in 
                      grid format. Where Nt and Np are the number of 
                      theta and phi points respectively. [radians]
 
     return:
-        area_grid  - numpy array [Nt, Np] of area values. The areas are
+        area_grid  - numpy array [Np, Nt] of area values. The areas are
                      calculated on a unit sphere and should therefore 
                      sum to 4*pi. [m^2]
     """
@@ -81,10 +81,10 @@ def integrate(theta_grid, phi_grid, value_grid):
     a simple but fast integration.
 
     arguments:
-        theta_grid - numpy array [Nt, Np] of theta points in 
+        theta_grid - numpy array [Np, Nt] of theta points in 
                      grid format. Where Nt and Np are the number of 
                      theta and phi points respectively. [radians]
-        phi_grid   - numpy array [Nt, Np] of phi points in 
+        phi_grid   - numpy array [Np, Nt] of phi points in 
                      grid format. Where Nt and Np are the number of 
                      theta and phi points respectively. [radians]
 
