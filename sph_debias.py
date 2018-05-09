@@ -87,6 +87,9 @@ def integrate(theta_grid, phi_grid, value_grid):
         phi_grid   - numpy array [Np, Nt] of phi points in 
                      grid format. Where Nt and Np are the number of 
                      theta and phi points respectively. [radians]
+        value_grid - numpy array [Np, Nt] of values on the sphere that
+                     need to be integrated. Example: poynting vector for
+                     calculating total radiated power on an antenna 
 
     return:
         integrand  - result of the staircase integration over the 
