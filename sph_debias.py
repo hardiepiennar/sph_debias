@@ -46,7 +46,6 @@ def calc_coord_area(theta_grid, phi_grid):
     Np = theta_grid.shape[0]  # No of phi steps
 
     dt = theta_grid[0,1] - theta_grid[0,0]  # Theta step in rad
-    dp = phi_grid[1,0] - phi_grid[0,0]      # Phi step in rad
 
     area_grid = np.zeros((Np, Nt))
 
